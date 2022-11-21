@@ -10,10 +10,9 @@ const typeDefs = gql`
 
   type Product {
     name: String!
+    description: String!
+    quantity: Int!
     price: Float!
-    inStock: Boolean!
-    weight: Int
-    description: String
     onSale: Boolean!
   }
 `;
@@ -22,6 +21,17 @@ const resolvers = {
   Query: {
     hello: () => {
       return "world";
+    },
+    products: () => {
+      return [
+        {
+          name: "Product 1",
+          description: "Product 1 description",
+          quantity: 100,
+          price: 100,
+          onSale: false,
+        },
+      ];
     },
   },
 };
