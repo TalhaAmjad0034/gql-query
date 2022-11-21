@@ -93,8 +93,13 @@ const typeDefs = gql`
   }
 
   type Product {
+    id: ID!
     name: String!
+    description: String!
+    quantity: Int!
+    price: Float!
     image: String!
+    onSale: Boolean!
   }
 `;
 
