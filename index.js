@@ -94,10 +94,7 @@ const typeDefs = gql`
 
   type Product {
     name: String!
-    description: String!
-    quantity: Int!
-    price: Float!
-    onSale: Boolean!
+    image: String!
   }
 `;
 
@@ -107,15 +104,7 @@ const resolvers = {
       return "world";
     },
     products: () => {
-      return [
-        {
-          name: "Product 1",
-          description: "Product 1 description",
-          quantity: 100,
-          price: 100,
-          onSale: false,
-        },
-      ];
+      return products;
     },
   },
 };
